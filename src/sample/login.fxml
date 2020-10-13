@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 25% 75% to 100% 100%, #2C315D,  #202344)linear-gradient(from 25% 75% to 100% 100%, #2C315D,  #202344);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.loginController">
+   <children>
+      <AnchorPane layoutX="242.32473754882812" layoutY="34.0" prefHeight="430.0" prefWidth="320.0" scaleShape="false" style="-fx-background-color: #202344;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label layoutX="114.0" layoutY="11.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="88.0" layoutY="36.0" text="Please authorize" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="95.0" text="email" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="175.0" text="password" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="usernameField" focusColor="#04c2ff" layoutX="28.0" layoutY="127.0" prefHeight="33.0" prefWidth="270.0" promptText="user@qsystem.com" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="28.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordField" focusColor="#04c2ff" layoutX="28.0" layoutY="208.0" prefHeight="33.0" prefWidth="270.0" promptText="********" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="28.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="24.0" layoutY="311.0" onAction="#setLoginButton" prefHeight="33.0" prefWidth="270.0" ripplerFill="#110701" style="-fx-background-color: #04c2ff;" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="cancelButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="24.0" layoutY="359.0" onAction="#setCancelButton" prefHeight="33.0" prefWidth="270.0" ripplerFill="#04c2ff" style="-fx-border-color: #04c2ff;" text="cancel" textFill="#04c2ff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="errorLoginLabel" alignment="CENTER" layoutX="24.0" layoutY="258.0" prefHeight="23.0" prefWidth="270.0" text="  " textAlignment="CENTER" textFill="#ff5353">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <CubicCurve controlX1="72.9871826171875" controlX2="-95.06595611572266" controlY1="-88.85433959960938" controlY2="146.6746826171875" endX="87.0" endY="5.5000152587890625" fill="#1f93ff00" layoutX="154.0" layoutY="242.0" startX="-150.0" stroke="#04c2ff" />
+      <CubicCurve controlX1="22.2489013671875" controlX2="-95.06595611572266" controlY1="-26.378463745117188" controlY2="146.6746826171875" endX="72.9871826171875" fill="#1f93ff00" layoutX="724.0" layoutY="247.0" startX="-161.00006103515625" startY="0.5000152587890625" stroke="#04c2ff" />
+      <CubicCurve controlX1="41.42240905761719" controlX2="-15.827713012695312" controlY1="-100.6693115234375" controlY2="83.93450927734375" endX="90.0" fill="#1f93ff00" layoutX="151.0" layoutY="264.0" startX="-150.0" stroke="#04c2ff" />
+      <CubicCurve controlX1="41.42240905761719" controlX2="-15.827713012695312" controlY1="-100.6693115234375" controlY2="83.93450927734375" endX="90.0" fill="#1f93ff00" layoutX="707.0" layoutY="278.0" startX="-145.1455078125" stroke="#04c2ff" />
+   </children>
+</AnchorPane>

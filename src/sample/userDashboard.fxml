@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #25284C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserController">
+   <children>
+      <Label layoutX="120.0" layoutY="47.0" text="User Dashboard" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="521.0" text="Outstanding Revenue" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+         <font>
+            <Font name="Avenir Book" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="205.0" text="Invoices" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="123.0">
+         <font>
+            <Font name="Avenir Book" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="689.0" layoutY="243.0" prefHeight="78.0" prefWidth="240.0" style="-fx-background-color: #2C315D;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="#00105" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="\$ 2,000" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="28.0" text="1 Sep, 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="12.0" text="Support" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="689.0" layoutY="328.0" prefHeight="78.0" prefWidth="240.0" style="-fx-background-color: #2C315D;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="#00106" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="\$ 34,443" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="28.0" text="10 Oct, 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="12.0" text="Structure" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <LineChart layoutX="122.0" layoutY="241.0" prefHeight="250.0" prefWidth="542.0" style="-fx-background-color: #2C315D;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <AnchorPane fx:id="PanBackground1" prefHeight="700.0" prefWidth="55.0" style="-fx-background-color: #202344;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="12.0" layoutY="198.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="9.0" layoutY="247.0" text="Account" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="11.0" layoutY="352.0" text="Invoice" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="9.0" layoutY="304.0" text="Structure" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <JFXButton fx:id="cancelButton" alignment="CENTER" defaultButton="true" depthTest="ENABLE" layoutX="3.0" layoutY="647.0" onAction="#setCancelButton" prefHeight="40.0" prefWidth="74.0" ripplerFill="#fa8d3e00" text="Log out" textAlignment="RIGHT" textFill="#04c2ff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane layoutX="122.0" layoutY="92.0" prefHeight="86.0" prefWidth="160.0" style="-fx-background-color: #2C315D;" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label layoutX="28.0" layoutY="26.0" text="\$ 12,094" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="26.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="51.0" text="Overdouce" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="553.0" layoutY="100.0" prefHeight="86.0" prefWidth="160.0" style="-fx-background-color: #2C315D;" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label layoutX="20.0" layoutY="9.0" text="\$ 4,500" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="26.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="34.0" text="In Draft" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="336.0" layoutY="100.0" prefHeight="86.0" prefWidth="160.0" style="-fx-background-color: #2C315D;" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label layoutX="24.0" layoutY="17.0" text="\$ 33,343" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="26.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="42.0" text="Total Standing" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="769.0" layoutY="98.0" prefHeight="86.0" prefWidth="160.0" style="-fx-background-color: #2C315D;" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label layoutX="20.0" layoutY="9.0" text="\$ 53,000" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="26.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="34.0" text="Total" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <CubicCurve controlX1="224.52999877929688" controlX2="193.86013793945312" controlY1="-131.01815795898438" controlY2="-318.0" endX="426.65374755859375" endY="-242.12710571289062" fill="#477bff00" layoutX="220.0" layoutY="559.0" startX="-49.99998474121094" startY="-100.0" stroke="#04c2ff" strokeWidth="2.0" />
+      <AnchorPane layoutX="689.0" layoutY="413.0" prefHeight="78.0" prefWidth="240.0" style="-fx-background-color: #2C315D;">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="#00133" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="\$ 23,44" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="28.0" text="17 Oct, 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="12.0" text="Building" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="123.0" layoutY="556.0" prefHeight="53.0" prefWidth="808.0" style="-fx-background-color: #2C315D;" AnchorPane.leftAnchor="123.0">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="#00133" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="28.0" text="17 Oct, 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="15.0" text="ARAMCO" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="702.0" layoutY="15.0" text="\$21.3 K" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ProgressBar layoutX="496.0" layoutY="15.0" prefHeight="16.0" prefWidth="162.0" progress="0.26" AnchorPane.topAnchor="20.0" />
+            <Label layoutX="396.0" layoutY="15.0" text="\$12,095 overdouce" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="123.0" layoutY="620.0" prefHeight="53.0" prefWidth="808.0" style="-fx-background-color: #2C315D;" AnchorPane.leftAnchor="123.0">
+         <children>
+            <Label layoutX="10.0" layoutY="12.0" text="#00133" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="28.0" text="17 Oct, 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="15.0" text="SACO" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="702.0" layoutY="15.0" text="\$74,21 K" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <ProgressBar layoutX="496.0" layoutY="15.0" prefHeight="16.0" prefWidth="162.0" progress="0.82" AnchorPane.topAnchor="20.0" />
+            <Label layoutX="396.0" layoutY="15.0" text="\$30,045 overdouce" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

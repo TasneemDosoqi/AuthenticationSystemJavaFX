@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #25284C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminController">
+   <children>
+      <Label layoutX="114.0" layoutY="31.0" text="Admin Dashboard" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="usersListView" layoutX="469.0" layoutY="148.0" prefHeight="134.0" prefWidth="502.0">
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets></ListView>
+      <Label layoutX="469.0" layoutY="95.0" text="Employees List" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Avenir Book" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="PanBackground1" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="55.0" style="-fx-background-color: #202344;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="12.0" layoutY="198.0" text="Stuff" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="9.0" layoutY="247.0" text="Account" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="11.0" layoutY="352.0" text="Invoice" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <Label layoutX="9.0" layoutY="304.0" text="Structure" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="10.0" />
+               </font>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </Label>
+            <JFXButton fx:id="cancelButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="8.0" layoutY="655.0" onAction="#setCancelButton" prefHeight="29.0" prefWidth="68.0" ripplerFill="#fa8d3e00" text="Log out" textAlignment="RIGHT" textFill="#04c2ff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="110.0" layoutY="75.0" prefHeight="582.0" prefWidth="316.0" style="-fx-background-color: #2C315D;">
+         <children>
+            <Label layoutX="26.0" layoutY="70.0" text="ID" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="239.0" text="Password" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userID" focusColor="#fd8f3c" layoutX="26.0" layoutY="102.0" prefHeight="33.0" prefWidth="76.0" promptText="ex. 111" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="userPassword" focusColor="#04c2ff" layoutX="26.0" layoutY="272.0" prefHeight="33.0" prefWidth="270.0" promptText="********" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXPasswordField>
+            <Label fx:id="errorDashboardLabel" alignment="CENTER" layoutX="21.0" layoutY="416.0" prefHeight="48.0" prefWidth="270.0" text="  " textAlignment="CENTER" textFill="#ff5353">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+      
+            <Label layoutX="26.0" layoutY="155.0" text="Email" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userEmail" focusColor="#04c2ff" layoutX="26.0" layoutY="187.0" prefHeight="33.0" prefWidth="270.0" promptText="user@qsystem.com" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="26.0" layoutY="329.0" text="Age" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userAge" focusColor="#04c2ff" layoutX="26.0" layoutY="361.0" prefHeight="33.0" prefWidth="76.0" promptText="00" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="119.0" layoutY="329.0" prefHeight="23.0" prefWidth="86.0" text="Work Title" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userWorkTitle" focusColor="#04c2ff" layoutX="119.0" layoutY="361.0" prefHeight="33.0" prefWidth="172.0" promptText="ex, Developer" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="119.0" layoutY="70.0" text="Name" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="username" focusColor="#04c2ff" layoutX="119.0" layoutY="102.0" prefHeight="33.0" prefWidth="172.0" promptText="ex, Ahmed" style="-fx-background-color: #FFFFFF#FFFFFF;" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="27.0" layoutY="24.0" text="User Information" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="addButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="60.0" layoutY="523.0" onAction="#setAddButton" prefHeight="33.0" prefWidth="209.0" ripplerFill="#110701" style="-fx-background-color: #fc8d3d;" text="ADD USER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="updateButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="60.0" layoutY="471.0" onAction="#setUpdateButton" prefHeight="33.0" prefWidth="209.0" ripplerFill="#110701" style="-fx-background-color: #fc8d3d;" text="UPDATE USER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="469.0" layoutY="300.0" prefHeight="357.0" prefWidth="503.0" style="-fx-background-color: #2C315D;">
+         <children>
+            <Label layoutX="26.0" layoutY="70.0" text="ID" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="138.0" text="Password" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="138.0" text="Email" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="202.0" text="Age" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="202.0" prefHeight="23.0" prefWidth="86.0" text="Work Title" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="71.0" text="Name" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="24.0" text="Employee Information" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deleteButton" buttonType="RAISED" defaultButton="true" depthTest="ENABLE" layoutX="275.0" layoutY="305.0" onAction="#setDeleteButton" prefHeight="33.0" prefWidth="209.0" ripplerFill="#110701" style="-fx-background-color: #fc8d3d;" text="DELETE USER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="IDLabel" layoutX="23.0" layoutY="99.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="NameLabel" layoutX="250.0" layoutY="99.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="PasswordLabel" layoutX="250.0" layoutY="166.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="EmailLabel" layoutX="23.0" layoutY="167.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="AgeLabel" layoutX="23.0" layoutY="234.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="23.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="workTitleLabel" layoutX="250.0" layoutY="235.0" prefHeight="30.0" prefWidth="198.0" textAlignment="CENTER" textFill="#04c2ff" AnchorPane.leftAnchor="250.0">
+               <font>
+                  <Font name="Avenir Book" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
